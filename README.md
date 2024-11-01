@@ -1,8 +1,8 @@
-# React + Vite
+# 파리 올림픽
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 이번 프로젝트의 목표
+- 리액트 컴포넌트와 훅(useState)을 다룰 수 있어요.
+- 리액트에서 이벤트를 관리할 수 있어요.
+- 리액트의 state, props 를 확실히 이해하고 사용할 수 있어요.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 
