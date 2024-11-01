@@ -33,10 +33,31 @@ function App() {
         setBronze("");
     }
 
-    // const updateCountry = (e) => {
-    //     e.preventDefault();
-    //     if ()
-    // }
+    const updateHandler = (e) => {
+        e.preventDefault();
+        const existedCountry = countryArr.some(countryArr2 => countryArr2.country === inputCountry)
+        if (!existedCountry) {
+            alert('등록되지 않은 국가입니다!');
+            return;
+        }
+        const updateCountry = countryArr.map(function (countryArr2) {
+            if (countryArr2.country === inputCountry) {
+                return {
+                    ...countryArr, 
+                    country: inputCountry,
+                    gold: Number(gold),
+                    silver: Number(silver),
+                    bronze: Number(bronze),
+                    id: Date.now(),
+                }
+            } else {
+                return countryArr2;
+            }
+        })
+        setCountryArr(updateCountry);
+        resetForm();
+    }
+
 
     const sortedCountry = [...countryArr].sort((a, b) => b.gold - a.gold || b.silver - a.silver || b.bronze - a.bronze)
 
@@ -84,7 +105,7 @@ function App() {
                     setBronze(e.target.value);
                 }} placeholder="0" />
                 <button onClick={handleSubmit}>국가 추가</button>
-                <button>업데이트</button>
+                <button onClick={updateHandler}>업데이트</button>
             </form>
 
             <div className="pStyle">
@@ -117,5 +138,4 @@ function App() {
         </div>
     </div>
 }
-
 export default App
