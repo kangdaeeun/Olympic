@@ -1,0 +1,13 @@
+.pStyle p {
+    flex: 1;
+    padding: 5px;
+}
+
+.pStyle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 900px;
+    gap : 5px;
+    padding: 5px;
+}
